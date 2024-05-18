@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: Outfit;
+        }
+        ul{
+            list-style: none;
+
+        }
+        li{
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: rgba(255, 99, 71, 0.746);
+        }
+        span{
+            color: tomato;
+        }
+        .container{
+            padding: 20px;
+            border-radius: 6px;
+            background-color: white;
+            box-shadow: 0px 0px 6px #00000043;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hey <%= name %>,</h1>
-    <p>Your form submitted successfully!</p>
+    <div class="container">
+        <h1>Hey <span><%= name %>,</span></h1>
+        <p>Your form submitted successfully!</p>
+        <p>The Details you were given</p>
+        <ul>
+            <li>Email : <%= email %></li>
+            <li>Message : <%= message %></li>
+        </ul>
+    </div>
 </body>
 </html>
