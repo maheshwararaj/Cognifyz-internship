@@ -12,6 +12,7 @@ app.listen(port,()=>{
     console.log("Server Running");
 })
 
+//sample data
 let employees = [{
     empid:"1",
     name:"mahesh",
@@ -36,10 +37,12 @@ let employees = [{
 
 app.get("/",(req,res)=>{
     console.log(req.body.name)
+    
     res.json({success:true})
 })
 
 app.get("/getlist",(req,res)=>{
+  
     res.json({success:true,employees})
 })
 app.post("/add",(req,res)=>{
